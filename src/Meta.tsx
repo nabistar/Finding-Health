@@ -9,11 +9,25 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
  * @returns {JSX.Element}
  */
 
-const Meta = (props) => {
+interface type {
+	keywords?: string;
+	author?: string;
+	description?: string;
+	title?: string;
+	url?: string;
+	subject?: string;
+	copyright?: string;
+	image?: string;
+	icon?: string;
+	shortcutIcon?: string;
+	appleTouchIcon?: string;
+}
+
+const Meta = (props: type) => {
   return (
     <HelmetProvider>
       <Helmet>
-        <meta charset="utf-8" />
+        <meta charSet="utf-8" />
         <title>{props.title}</title>
         {/* SEO 태그 */}
         <meta name="description" content={props.description} />
@@ -38,11 +52,6 @@ const Meta = (props) => {
     </HelmetProvider>
   );
 };
-
-/**
- * props에 대한 기본값 설정
- * @type {{keywords: string, author: string, description: string, title: string, url: string}}
- */
 
 Meta.defaultProps = {
   title: "건강 찾기",
