@@ -54,8 +54,8 @@ const Meta = (props: type) => {
 };
 
 Meta.defaultProps = {
-  title: "건강 찾기",
-  description: "국가 건강 검진 기관 찾기",
+  title: "내 물건 찾기",
+  description: "분실물 습득 조회",
   keywords: "React",
   author: "hana",
   subject: "포트폴리오",

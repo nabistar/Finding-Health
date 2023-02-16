@@ -11,12 +11,6 @@ const GlobalStyles = createGlobalStyle`
 	font-style: normal;
 	}
 
-	@import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
-
-	.jejumyeongjo * { 
-	font-family: 'Jeju Myeongjo', serif;
-	}
-
 	html {
 		width: 100%;
 		height: 100%;

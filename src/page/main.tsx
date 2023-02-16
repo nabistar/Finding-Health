@@ -1,6 +1,11 @@
-import React, { memo } from "react";
+import React, { memo, useEffect } from "react";
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
+import { NavLink, Route, Routes, useNavigate } from "react-router-dom";
+
+// page import
+import Research from "./Research";
+import Loss from "./Loss";
+import Get from "./Get";
 
 // 미디어 쿼리
 import mq from "../MediaQuery";
@@ -12,8 +17,9 @@ const Container = styled.div`
     width: 100%;
     height: 100%;
     background: url(${back}) no-repeat;
-	background-size: 100% 100%;
-    display: flex;
+    background-size: 100% 100%;
+	display: flex;
+	flex-direction: column;
 
     @keyframes open {
         from {
@@ -25,63 +31,80 @@ const Container = styled.div`
         }
     }
 
-    .healthicon {
-        width: 60%;
-        height: 70%;
-		margin: auto;
-		margin-top: 8%;
-		background-color: rgba(255, 255, 255, 0.8);
-        animation-duration: 2s;
+    .tab {
+		width: 60%;
+		height: 30px;
+		margin: 120px auto 0;
+		display: flex;
+		animation-duration: 2s;
         animation-name: open;
-		padding-top: 15%;
-		box-sizing: border-box;
-
-        h1,
-        a {
-            text-align: center;
-            font-family: "KyoboHandwriting2020A";
-        }
-
-        h1 {
-            font-weight: bold;
-            font-size: 60px;
-        }
 
         a {
-			width: 100px;
+            width: 100px;
+            height: 100%;
             text-decoration: none;
             display: block;
-			margin: auto;
-            margin-top: 80px;
-            font-size: 20px;
+            font-size: 14px;
+			text-align: center;
+			background-color: rgba(255, 255, 255, 0.8);
+			color: #000;
+			padding-top: 8px;
+			box-sizing: border-box;
+			margin-right: 10px;
+			font-family: 'KyoboHandwriting2020A';
 
             &:hover {
-                color: #33B7C3;
+                color: #33b7c3;
             }
+
+			&.active {
+				background-color: rgba(220, 255, 201, 0.8);
+				font-weight: bold;
+			}
         }
     }
 
+    .main {
+        width: 60%;
+        height: 70%;
+        margin: 0 auto 0;
+        background-color: rgba(255, 255, 255, 0.8);
+        animation-duration: 2s;
+        animation-name: open;
+        box-sizing: border-box;
+    }
+
     ${mq.maxWidth("sm")`
-		.healthicon {
+		.main {
 			width: 80%;
 			margin-top: 20%;
-			padding-top: 45%;
-
-				h1 {
-				font-size: 35px;
-			}
 		}
 
 	`}
 `;
 
 const main = memo(() => {
+
+	const navigate = useNavigate();
+
+	useEffect(() => {
+		navigate('/main');
+	}, []);
+
     return (
         <Container>
-            <div className="healthicon">
-                <h1>국가 건강 검진 기관 찾기</h1>
-                <NavLink to="/finding">찾으러 가기</NavLink>
-            </div>
+            <nav className="tab">
+                <NavLink to="main">메인</NavLink>
+				<NavLink to="lossItem">분실물</NavLink>
+				<NavLink to="getItem">습득물</NavLink>
+            </nav>
+            <div className="main">
+				<Routes>
+					<Route path="main" element={<Research />} />
+					<Route path="lossItem" element={<Loss />} />
+					<Route path="getItem" element={<Get />} />
+				</Routes>
+			</div>
         </Container>
     );
 });

@@ -1,8 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
+import LossSlice from './Slice/LossSlice';
 
 const store = configureStore({
 	reducer: {
-		   
+		LossSlice: LossSlice
 	}
 });
 
