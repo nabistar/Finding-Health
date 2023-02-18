@@ -101,5 +101,6 @@
     "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
 
 	"jsx": "react-jsx",
+	"typeRoots": ["./@types", "./node_modules/@types"]
   }
 }

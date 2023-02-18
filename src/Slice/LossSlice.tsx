@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import axios from 'axios';
+import Parser from 'react-xml-parser';
 
 const API_URL = 'http://apis.data.go.kr/1320000/LosPtfundInfoInqireService';
 const service: string | undefined = process.env.REACT_APP_SERVICE_KEY;
@@ -12,22 +13,43 @@ class ErrorClass extends Error {
 	};
 }
 
+interface list {
+	rnum: number,
+	atcId: string,
+	fdSn: number,
+	prdtClNm: string,
+	clrNm: string,
+	fdPrdtNm: string,
+	fdSbjt: string,
+	fdFilePathImg: string,
+	depPlace: string,
+	fdYmd: number
+}
+
+interface result {
+	items: {
+		item: list[]
+	};
+}
+
 interface info {
 	[key: string]: string | number | info
 }
 
 interface initialState {
-	data: info | null,
+	data: result | null,
 	loading: boolean,
 	error: ErrorClass | null
 }
 
-export const getLossList = createAsyncThunk<info, info, {extra: {jwt: string}, rejectValue: (ErrorClass) }>('LossSlice/getLossList', async (payload, { rejectWithValue }) => {
+export const getLossList = createAsyncThunk<result, info, {rejectValue: (ErrorClass) }>('LossSlice/getLossList', async (payload, { rejectWithValue }) => {
 	let type: string | null = null;
 	let params: info | null = null;
 
-	if(typeof payload.type == 'string') {
-		type = payload.type;
+	if(payload.type == 'list') {
+		type = 'getPtLosfundInfoAccToClAreaPd';
+	} else if (payload.type == 'info') {
+		type = 'getPtLosfundDetailInfo';
 	}
 
 	if(typeof payload.params == 'object' && typeof service == 'string') {
@@ -39,7 +61,7 @@ export const getLossList = createAsyncThunk<info, info, {extra: {jwt: string}, r
 		const response = await axios.get(`${API_URL}/${type}`, {
 			params: params
 		});
-		return response.data;
+		return response.data.response.body;
 	} catch (err) {
 		if(err instanceof ErrorClass) {
 			return rejectWithValue(err);

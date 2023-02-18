@@ -77,7 +77,6 @@ const Container = styled.div`
     ${mq.maxWidth("sm")`
 		.main {
 			width: 80%;
-			margin-top: 20%;
 		}
 
 	`}

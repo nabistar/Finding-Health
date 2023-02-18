@@ -1,10 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { configureStore, MiddlewareArray } from '@reduxjs/toolkit';
 import LossSlice from './Slice/LossSlice';
 
 const store = configureStore({
 	reducer: {
 		LossSlice: LossSlice
-	}
+	},
 });
 
 export type RootState = ReturnType<typeof store.getState>;
