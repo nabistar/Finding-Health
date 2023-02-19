@@ -39,3 +39,9 @@ React와 typescript를 이용했으며, typescript를 처음 이용해보고자 
 	<img src="https://user-images.githubusercontent.com/103877647/219937751-330524ed-84f4-475a-9bc0-a0a226ece219.png" width="500" height="500">
 	<img src="https://user-images.githubusercontent.com/103877647/219937768-dc7b27bf-26bc-4ab7-9389-a26858004fed.png" width="500" height="500">
 </div>
+
+### 상세 정보 창
+<div>
+	<img src="https://user-images.githubusercontent.com/103877647/219937956-decb2c87-f5be-4c72-94f5-67e4b06a01fa.png" width="500" height="500">
+	<img src="https://user-images.githubusercontent.com/103877647/219937965-d8a87866-7f31-4161-b8f6-d543b95aa266.png" width="500" height="500">
+</div>
