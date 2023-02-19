@@ -9,12 +9,17 @@
 
 React와 typescript를 이용했으며, typescript를 처음 이용해보고자 진행한 프로젝트이기 때문에 미숙한 부분이 있을 수 있습니다.
 
-<div align=center><h1>📚 사용 기술</h1></div>
+<div align=left><h1>사용 기술</h1></div>
 
-<div align=center> 
+<div align=left> 
   <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> 
   <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> 
   <img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
   <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black">
 
 </div>
+
+## 주요 기능
+1. 경찰청 공공데이터를 이용해, 경찰청 페이지에 올라간 분실물 글 확인 가능.
+2. 경찰청과 연계된 각종 포털 기관에서 습득한 습득물 확인 가능.
+3. 경찰청 공공코드를 이용하여 검색할 지역 및 물품을 코드화 후, 검색할 수 있도록 구현.
