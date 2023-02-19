@@ -6,6 +6,8 @@ import { NavLink, Route, Routes, useNavigate } from "react-router-dom";
 import Research from "./Research";
 import Loss from "./Loss";
 import Get from "./Get";
+import GetView from './GetView';
+import LossView from './LossView';
 
 // 미디어 쿼리
 import mq from "../MediaQuery";
@@ -102,6 +104,8 @@ const main = memo(() => {
 					<Route path="main" element={<Research />} />
 					<Route path="lossItem" element={<Loss />} />
 					<Route path="getItem" element={<Get />} />
+					<Route path="getItemview/:id" element={<GetView />} />
+					<Route path="lossItemview/:id" element={<LossView />} />
 				</Routes>
 			</div>
         </Container>
