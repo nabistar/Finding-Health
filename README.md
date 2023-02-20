@@ -33,26 +33,26 @@ React와 typescript를 이용했으며, typescript를 처음 이용해보고자 
 ### 기본 화면 및 목록
 
 <div>
-	<img src="https://user-images.githubusercontent.com/103877647/219937639-5d67eedb-ede6-42e8-b0a5-b6c14e9ec3eb.png" width="900" height="500" />
-	<img src="https://user-images.githubusercontent.com/103877647/219937654-f1192781-b772-4955-a3ae-abd8a92117e4.png" width="900" height="500" />
-	<img src="https://user-images.githubusercontent.com/103877647/219937677-dcd9412e-51e1-450d-ab8a-42f785217bf1.png" width="900" height="500" />
+	<img src="https://user-images.githubusercontent.com/103877647/219937639-5d67eedb-ede6-42e8-b0a5-b6c14e9ec3eb.png" width="900" height="600" />
+	<img src="https://user-images.githubusercontent.com/103877647/219937654-f1192781-b772-4955-a3ae-abd8a92117e4.png" width="900" height="600" />
+	<img src="https://user-images.githubusercontent.com/103877647/219937677-dcd9412e-51e1-450d-ab8a-42f785217bf1.png" width="900" height="600" />
 </div>
 <br />
 
 ### 검색 팝업
 
 <div>
-	<img src="https://user-images.githubusercontent.com/103877647/219937726-589ce0b7-b56e-408c-b6f4-1da1880ae614.png" width="900" height="500" />
-	<img src="https://user-images.githubusercontent.com/103877647/219937751-330524ed-84f4-475a-9bc0-a0a226ece219.png" width="900" height="500" />
-	<img src="https://user-images.githubusercontent.com/103877647/219937768-dc7b27bf-26bc-4ab7-9389-a26858004fed.png" width="900" height="500" />
+	<img src="https://user-images.githubusercontent.com/103877647/219937726-589ce0b7-b56e-408c-b6f4-1da1880ae614.png" width="900" height="600" />
+	<img src="https://user-images.githubusercontent.com/103877647/219937751-330524ed-84f4-475a-9bc0-a0a226ece219.png" width="900" height="600" />
+	<img src="https://user-images.githubusercontent.com/103877647/219937768-dc7b27bf-26bc-4ab7-9389-a26858004fed.png" width="900" height="600" />
 </div>
 <br />
 
 ### 상세 정보 창
 
 <div>
-	<img src="https://user-images.githubusercontent.com/103877647/219937956-decb2c87-f5be-4c72-94f5-67e4b06a01fa.png" width="900" height="500" />
-	<img src="https://user-images.githubusercontent.com/103877647/219937965-d8a87866-7f31-4161-b8f6-d543b95aa266.png" width="900" height="500" />
+	<img src="https://user-images.githubusercontent.com/103877647/219937956-decb2c87-f5be-4c72-94f5-67e4b06a01fa.png" width="900" height="600" />
+	<img src="https://user-images.githubusercontent.com/103877647/219937965-d8a87866-7f31-4161-b8f6-d543b95aa266.png" width="900" height="600" />
 </div>
 <br />
 
